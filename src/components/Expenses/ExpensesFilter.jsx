@@ -1,9 +1,10 @@
-import "./ExpensesFilter.css";
-import { useState } from "react";
+import "../ExpensesCSS/ExpensesFilter.css";
+
 export default function ExpensesFilter(props) {
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
   };
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
