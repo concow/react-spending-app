@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Expenses from "../components/Expenses/Expenses";
 import NewExpense from "../components/NewExpense/NewExpense";
+import Spinner from "../components/UI/Spinner";
+// import { getExpenses, reset } from "../features/expenses/ExpenseSlice";
 import "./Dashboard.css";
 
 const DUMMY_EXPENSES = [
@@ -35,20 +37,37 @@ const DUMMY_EXPENSES = [
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const { user } = useSelector((state) => state.auth);
+  // const { expenses, isLoading, isError, isSuccess, message } = useSelector(
+  //   (state) => state.expenses
+  // );
 
   useEffect(() => {
+    // if (isError) {
+    //   console.log(isError);
+    // }
     if (!user) {
       navigate("/login");
     }
+
+    // dispatch(getExpenses());
+    // return () => {
+    //   dispatch(reset());
+    // };
   }, [user, navigate]);
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [expense, setExpense] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    setExpenses((prevExpenses) => {
+    setExpense((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
   };
+  // if (isLoading) {
+  //   return <Spinner />;
+  // }
+
   return (
     <div className="App">
       <div className="name-heading">
@@ -56,7 +75,7 @@ export default function Dashboard() {
       </div>
       <p>Expense Dashboard</p>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Expenses items={expense} />
     </div>
   );
 }

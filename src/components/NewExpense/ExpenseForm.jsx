@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { createExpense } from "../../features/expenses/ExpenseSlice";
 import "./ExpenseForm.css";
 
 export default function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const dispatch = useDispatch();
+
   //Using ONE state example - with State Object
   //   const [userInput, setUserInput] = useState({
   //     enteredTitle: "",
@@ -17,8 +20,6 @@ export default function ExpenseForm(props) {
     setEnteredTitle(event.target.value);
 
     // ONE State example using spread operator to keep user input and not lose it
-    // setUserInput({ ...userInput, enteredTitle: event.target.value });
-    //OR (This way is better)
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
@@ -32,12 +33,15 @@ export default function ExpenseForm(props) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
+    console.log(enteredDate);
     const expenseData = {
       title: enteredTitle,
       amount: +enteredAmount,
       date: new Date(enteredDate),
     };
+    //line below here not sure about how it will impact code
+    dispatch(createExpense(expenseData));
+    //dispatch(createExpense({expenseData}))
     props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
