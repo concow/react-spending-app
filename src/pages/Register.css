@@ -6,12 +6,13 @@
 }
 
 .heading p {
-  color: #828282;
+  color: #bebebe;
+  font-size: 18px;
 }
 
 .form,
 .content {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 
