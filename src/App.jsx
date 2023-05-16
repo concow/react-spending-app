@@ -1,5 +1,3 @@
-import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense/NewExpense";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -29,11 +27,9 @@ const App = () => {
 export default App;
 
 //TODO:
-
-//Expenses added to Database per User
-//Delete Function on Expenses
-//Update/Edit Expense function?
+//ONE STATE
 //Cohesive Styling amongst whole App
+//Deployment!
 
 //On 4th video 26:30
 
@@ -52,3 +48,30 @@ export default App;
 
 //NEW ERROR WITH STATE
 //After video on 33:45
+//In dashboard: Cannot destructure property 'expenses' of 'useSelector(...)' as it is undefined.
+//Leave off here for the day
+
+//UPDATE! FIXED IT.. I expense not expenses in my store! lolz
+
+//5/13/23
+//Update: So working however, I seem to have two different states, and I need to figure that out better.
+//So then I can follow the video and have it persist to backend and delete. I think I can figure it out
+//just gonna take some time to reorganize functions from previous State.
+
+//IMPORTANT! The beauty with Redux, is I dispatched from ExpenseForm to my Slice,
+// then brought it to Dashboard all with dispatch. I don't need props and shit and handler
+//functions play around with it that way... I think it can work. Of course it can. Follow from
+//Video 34:20 start there.
+
+//1:00AM you got the data there! Just figure what to do with it!
+
+//5/15 Solved some major issues today! An update on what I need to do..
+// Adding new item again..
+// Filtering items by Year
+// Chart Working
+// Displaying Date
+//
+//
+// --LATER--
+// Cohesive styling
+// Deployment

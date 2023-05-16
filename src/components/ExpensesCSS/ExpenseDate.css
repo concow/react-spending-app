@@ -13,17 +13,19 @@
 }
 
 .expense-date__month {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: 2rem;
 }
 
 .expense-date__year {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
 .expense-date__day {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.1rem;
 }
