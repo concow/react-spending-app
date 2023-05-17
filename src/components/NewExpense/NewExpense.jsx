@@ -28,8 +28,12 @@ export default function NewExpense(props) {
       )}
       {/* otherwise show form */}
       {isEditing && (
+        // <ExpenseForm
+        //   onSaveExpenseData={saveExpenseDataHandler}
+        //   onCancel={stopEditingHandler}
+        // />
         <ExpenseForm
-          onSaveExpenseData={saveExpenseDataHandler}
+          // onSaveExpenseData={saveExpenseDataHandler}
           onCancel={stopEditingHandler}
         />
       )}

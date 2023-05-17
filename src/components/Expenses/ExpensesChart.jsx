@@ -1,6 +1,8 @@
+import React from "react";
+
 import Chart from "../Chart/Chart";
 
-export default function ExpensesChart(props) {
+export default function ExpensesChart({ items }) {
   const chartDataPoints = [
     { label: "Jan", value: 0 },
     { label: "Feb", value: 0 },
@@ -15,10 +17,24 @@ export default function ExpensesChart(props) {
     { label: "Nov", value: 0 },
     { label: "Dec", value: 0 },
   ];
+  // const convertYear = items.map((d) => {
+  //   const newDate = new Date(d.date);
+  //   const year = newDate.getFullYear();
+  //   // console.log(year);
+  //   return year;
+  // });
 
-  for (const expense of props.expenses) {
-    const expenseMonth = expense.date.getMonth(); //Starting at 0 => Jan = 0
+  //LOOK INTO THIS FUNCTION... I THINK IT IS NOT ASSIGNING TO CORRECT MONTHS
+  //SO CLOSE! Keep following data.. think good here, check <Chart component
+  //Nope, we're good, ALREADY FIXED IT! Setting date to expense.date was key factor in assigning data
+
+  for (const expense of items) {
+    const date = expense.date;
+    const newDate = new Date(date); // SOMETHING NOT GOING THROUGH HERE.. I BELIEVE
+    const expenseMonth = newDate.getMonth(); // starting at 0 => January => 0
+    // console.log(expenseMonth);
     chartDataPoints[expenseMonth].value += expense.amount;
   }
+
   return <Chart dataPoints={chartDataPoints} />;
 }

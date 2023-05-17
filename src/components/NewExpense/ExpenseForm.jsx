@@ -42,7 +42,7 @@ export default function ExpenseForm(props) {
     //line below here not sure about how it will impact code
     dispatch(createExpense(expenseData));
     //dispatch(createExpense({expenseData}))
-    props.onSaveExpenseData(expenseData);
+    // props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");

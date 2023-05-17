@@ -75,3 +75,20 @@ export default App;
 // --LATER--
 // Cohesive styling
 // Deployment
+
+//5/16/23 AM
+
+//Kicking Ass 1PM
+//Fixed Date, thats is displaying now
+//Refactored adding new Expense to new state, that is working now!
+
+//4 ITEMS LEFT:
+//Next, is showing filtered items by year
+//Then show that working with Chart display..
+//CSS / Styling (Cohesive)
+//Deployment
+
+//5/16/23 PM
+//Full working app. Now all left is
+//CSS / Styling (Simple Cohesive among all components)
+//Deployment
