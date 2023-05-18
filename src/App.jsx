@@ -26,17 +26,18 @@ const App = () => {
 
 export default App;
 
+//LOGINS:
+//test@gmail.com
+//123
+
+//connor@gmail.com
+//12345
+
 //TODO:
-//ONE STATE
 //Cohesive Styling amongst whole App
 //Deployment!
 
 //On 4th video 26:30
-
-//FOUND WHAT WAS WRONG commented out store
-//Don't forget you commented out request in ExpenseController - fixed 400 error
-//When uncomment store reducers we have a new console error to deal with tomorrow
-//SOLVED: 5 min later, I had fulfilled instead of fulfiller in ExpenseSlice extrareducers lol
 
 //So expense in devtools isnt showing everything. I believe I need to fix my schema to show multiple fields
 //NOW REALLY ONTO TOMORROW GO TO BED!
@@ -92,3 +93,31 @@ export default App;
 //Full working app. Now all left is
 //CSS / Styling (Simple Cohesive among all components)
 //Deployment
+//Update README.md and instructions
+
+//5/17/23
+//Almost done Styling
+//Deployment eventually
+//Having a Logout issue, where not loggin out properly, going to need to trouble shoot that.
+//Some weird loop it puts it in.
+
+//TOMORROW:
+//Fix loop error. useEffect i think on logout
+//add useEffect or something once I delete a expense
+
+//Once those are completed back to what I was doing
+
+//UPDATE fixed delete expense
+//6PM Update.. I think I fixed the error.
+//changed navigate("/login") on logout not ("/") which put in infinite loop
+//However, I tried another User to logout and sent me in another loop. Getting better.
+//Or you try logging in and out it breaks after couple times maybe. Interesting.
+
+//5/18/23
+//Issue semi solved I believed. I'm not getting logout fulfilled but I am able to log in and out.
+//Something to look into.
+//I commented out a piece of code in Dashboard useEffect, that reset the State on Mount. It was putting
+//me in that infinite loop. So it's working now.
+//I would like to get logout fullfilled but I can look into that later, having a working app is what matters
+
+// 5/18/23 PM

@@ -10,9 +10,10 @@ export default function Header() {
   const { user } = useSelector((state) => state.auth);
 
   const onLogout = () => {
-    console.log("I'm Here");
+    console.log("onLogout");
     dispatch(logout());
     dispatch(reset());
+    console.log(dispatch(reset()));
     navigate("/");
   };
 

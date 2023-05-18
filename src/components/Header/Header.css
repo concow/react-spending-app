@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Smokum&display=swap");
 
 .header {
   display: flex;
@@ -41,8 +41,8 @@ a {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
-  background: #000;
-  color: #fff;
+  background: white;
+  color: black;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -80,5 +80,6 @@ ul {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-family: "Bruno Ace SC", cursive;
 }

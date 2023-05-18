@@ -24,15 +24,10 @@ export default function ExpensesChart({ items }) {
   //   return year;
   // });
 
-  //LOOK INTO THIS FUNCTION... I THINK IT IS NOT ASSIGNING TO CORRECT MONTHS
-  //SO CLOSE! Keep following data.. think good here, check <Chart component
-  //Nope, we're good, ALREADY FIXED IT! Setting date to expense.date was key factor in assigning data
-
   for (const expense of items) {
     const date = expense.date;
-    const newDate = new Date(date); // SOMETHING NOT GOING THROUGH HERE.. I BELIEVE
+    const newDate = new Date(date);
     const expenseMonth = newDate.getMonth(); // starting at 0 => January => 0
-    // console.log(expenseMonth);
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 

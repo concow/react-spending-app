@@ -8,6 +8,8 @@
 .chart-bar__inner {
   height: 100%;
   width: 100%;
+  max-width: 0.9rem;
+  /* min-width: ; */
   border: 1px solid #313131;
   border-radius: 12px;
   background-color: #7b80a3;
@@ -20,11 +22,17 @@
 .chart-bar__fill {
   background-color: #00245d;
   width: 100%;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .chart-bar__label {
   font-weight: bold;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.chart-bar__value {
+  font-weight: bold;
+  font-size: 0.7rem;
   text-align: center;
 }

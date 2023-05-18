@@ -44,7 +44,7 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
 
 //Logout User
 export const logout = createAsyncThunk("auth/logout", async () => {
-  console.log("In AuthSlice");
+  console.log("In AuthSlice: Logout");
   await AuthService.logout();
 });
 
@@ -53,6 +53,7 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     reset: (state) => {
+      console.log("In Reset " + user);
       state.isLoading = false;
       state.isSuccess = false;
       state.isError = false;
@@ -77,6 +78,7 @@ export const authSlice = createSlice({
       })
       .addCase(logout.fulfilled, (state) => {
         state.user = null;
+        console.log("In .addCase logout" + state.user);
       })
       .addCase(login.pending, (state) => {
         state.isLoading = true;

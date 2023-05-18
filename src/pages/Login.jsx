@@ -25,14 +25,19 @@ export default function Login() {
 
   useEffect(() => {
     if (isError) {
+      console.log("Login " + toast.error(message));
       toast.error(message);
     }
 
     if (isSuccess || user) {
+      console.log("Login isSuccess? " + user);
       navigate("/");
+    } else {
+      navigate("/login");
     }
 
     dispatch(reset());
+    console.log(dispatch(reset()));
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const formHandler = (e) => {
@@ -84,7 +89,7 @@ export default function Login() {
               onChange={formHandler}
             />
 
-            <button type="submit" className="btn btn-block">
+            <button type="submit" className="login-btn btn-block">
               Login
             </button>
           </div>

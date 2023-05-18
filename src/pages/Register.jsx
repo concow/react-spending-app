@@ -109,7 +109,7 @@ export default function Register() {
               placeholder="Confirm Password"
               onChange={formHandler}
             />
-            <button type="submit" className="btn btn-block">
+            <button type="submit" className="register-btn">
               Submit
             </button>
           </div>

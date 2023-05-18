@@ -16,13 +16,13 @@ export default function ExpenseForm(props) {
   //     enteredDate: "",
   //   });
 
+  // ONE State example using spread operator to keep user input and not lose it
+  // setUserInput((prevState) => {
+  //   return { ...prevState, enteredTitle: event.target.value };
+  // });
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-
-    // ONE State example using spread operator to keep user input and not lose it
-    // setUserInput((prevState) => {
-    //   return { ...prevState, enteredTitle: event.target.value };
-    // });
   };
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
@@ -39,10 +39,8 @@ export default function ExpenseForm(props) {
       amount: +enteredAmount,
       date: new Date(enteredDate),
     };
-    //line below here not sure about how it will impact code
     dispatch(createExpense(expenseData));
-    //dispatch(createExpense({expenseData}))
-    // props.onSaveExpenseData(expenseData);
+    //props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");

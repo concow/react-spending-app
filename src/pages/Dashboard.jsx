@@ -6,33 +6,35 @@ import NewExpense from "../components/NewExpense/NewExpense";
 import Spinner from "../components/UI/Spinner";
 import { getExpenses, reset } from "../features/expenses/ExpenseSlice";
 import "./Dashboard.css";
+
 export default function Dashboard() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { expenses, isLoading, isError, message } = useSelector(
     (state) => state.expenses
   );
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  // console.log(
-  //   useSelector((state) => {
-  //     console.log(state.expenses);
-  //   })
-  // );
+  //SOMETHING WRONG WITH MY CONDITIONAL THAT PUTS ME IN LOOP BUT I BELIEVE I'm hitting all correct pathway
+  //I just keep looping
 
+  // const [loggedIn, setLogginIn] = useState(false);
   useEffect(() => {
     if (isError) {
-      console.log(isError);
+      //Something is looping me here!
+      console.log(message);
     }
     if (!user) {
+      console.log("Do I get to here (!user)? " + user + isError);
       navigate("/login");
+      console.log("Do we Get after navigate(/login)" + user + isError);
     }
 
     dispatch(getExpenses());
 
-    return () => {
-      dispatch(reset());
-    };
+    // return () => {
+    //   dispatch(reset());
+    // };
   }, [user, navigate, isError, message, dispatch]);
 
   if (isLoading) {
@@ -42,10 +44,9 @@ export default function Dashboard() {
   return (
     <div>
       <div className="name-heading">
-        <h4>Welcome {user && user.name}</h4>
+        <h4>Welcome, {user && user.name}</h4>
       </div>
-      <p>Expense Dashboard</p>
-      {/* <NewExpense onAddExpense={addExpenseHandler} /> */}
+      <div className="dashboard-logo">Expense Dashboard</div>
       <NewExpense />
       <div className="expenses_">
         <Expenses items={expenses} />
@@ -53,8 +54,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-// expenses.map((expense) => (
-//   // console.log(expense)
-//   <NewTestData key={expense._id} items={expense} />
-// ));

@@ -5,14 +5,14 @@ import { useState } from "react";
 export default function NewExpense(props) {
   const [isEditing, setIsEditing] = useState(false);
 
-  const saveExpenseDataHandler = (enteredExpenseData) => {
-    const expenseData = {
-      ...enteredExpenseData,
-      id: Math.random().toString(),
-    };
-    props.onAddExpense(expenseData);
-    setIsEditing(false);
-  };
+  // const saveExpenseDataHandler = (enteredExpenseData) => {
+  //   const expenseData = {
+  //     ...enteredExpenseData,
+  //     id: Math.random().toString(),
+  //   };
+  //   props.onAddExpense(expenseData);
+  //   setIsEditing(false);
+  // };
 
   const startEditingHandler = () => {
     setIsEditing(true);
@@ -28,10 +28,6 @@ export default function NewExpense(props) {
       )}
       {/* otherwise show form */}
       {isEditing && (
-        // <ExpenseForm
-        //   onSaveExpenseData={saveExpenseDataHandler}
-        //   onCancel={stopEditingHandler}
-        // />
         <ExpenseForm
           // onSaveExpenseData={saveExpenseDataHandler}
           onCancel={stopEditingHandler}

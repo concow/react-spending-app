@@ -7,6 +7,7 @@ export default function ChartBar({ value, maxValue, label }) {
   }
   return (
     <div className="chart-bar">
+      <div className="chart-bar__value">${value}</div>
       <div className="chart-bar__inner">
         <div
           className="chart-bar__fill"
@@ -17,3 +18,15 @@ export default function ChartBar({ value, maxValue, label }) {
     </div>
   );
 }
+// return (
+//     <div className="chart-bar">
+//       <div className="chart-bar__inner">
+//         <div
+//           className="chart-bar__fill"
+//           style={{ height: barFillHeight }}
+//         ></div>
+//       </div>
+//       <div className="chart-bar__label">{label}</div>
+//     </div>
+//   );
+// }

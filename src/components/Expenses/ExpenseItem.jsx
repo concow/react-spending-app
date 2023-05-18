@@ -17,7 +17,7 @@ function ExpenseItem({ expense }) {
           <div className="expense-item__price">${expense.amount}</div>
         </div>
         <button
-          className="close"
+          className="item-btn"
           onClick={() => dispatch(deleteExpense(expense._id))}
         >
           X

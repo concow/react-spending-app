@@ -23,7 +23,7 @@
 .new-expense button:hover,
 .new-expense button:active {
   background-color: #1373a3;
-  border-color: #38f827;
+  border-color: white;
 }
 
 .new-expense button.alternative {
