@@ -41,8 +41,8 @@
 .register-btn {
   padding: 10px 20px;
   border: 1px solid #000;
-  border-radius: 5px;
-  background: #5fb0f2;
+  border-radius: 12px;
+  background: #2289de;
   color: white;
   font-size: 16px;
   font-weight: 700;
@@ -57,10 +57,10 @@
 }
 
 .register-btn:hover {
-  background: #173f61;
+  background: #57adf4;
   transform: scale(0.98);
 }
-/* .btn-block {
-  width: 50%;
-  margin-bottom: 20px;
-} */
+.register-form {
+  width: 60%;
+  display: inline-block;
+}

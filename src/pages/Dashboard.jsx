@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Expenses from "../components/Expenses/Expenses";
@@ -15,13 +15,8 @@ export default function Dashboard() {
     (state) => state.expenses
   );
 
-  //SOMETHING WRONG WITH MY CONDITIONAL THAT PUTS ME IN LOOP BUT I BELIEVE I'm hitting all correct pathway
-  //I just keep looping
-
-  // const [loggedIn, setLogginIn] = useState(false);
   useEffect(() => {
     if (isError) {
-      //Something is looping me here!
       console.log(message);
     }
     if (!user) {

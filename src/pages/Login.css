@@ -41,8 +41,8 @@
 .login-btn {
   padding: 10px 20px;
   border: 1px solid #000;
-  border-radius: 5px;
-  background: #5fb0f2;
+  border-radius: 12px;
+  background: #2289de;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -55,7 +55,7 @@
 }
 
 .login-btn:hover {
-  background: #173f61;
+  background: #57adf4;
   transform: scale(0.98);
 }
 
@@ -66,4 +66,12 @@
 
 h4 {
   color: white;
+}
+
+.login-form {
+  width: 60%;
+  /* justify-content: center; */
+  display: flex;
+  /* align-items: center; */
+  display: inline-block;
 }

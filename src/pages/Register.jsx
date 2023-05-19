@@ -71,7 +71,7 @@ export default function Register() {
         <p>Create an Account</p>
       </section>
       <section className="form">
-        <form onSubmit={formSubmitHandler}>
+        <form className="register-form" onSubmit={formSubmitHandler}>
           <div className="form-group">
             <input
               type="text"

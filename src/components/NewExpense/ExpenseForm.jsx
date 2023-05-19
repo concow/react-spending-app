@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { createExpense } from "../../features/expenses/ExpenseSlice";
 import "./ExpenseForm.css";
 
-export default function ExpenseForm(props) {
+export default function ExpenseForm({ onCancel }) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -47,7 +47,7 @@ export default function ExpenseForm(props) {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="expense_form_" onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -83,10 +83,12 @@ export default function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="button" onClick={props.onCancel}>
+        <button className="cancel-btn" type="button" onClick={onCancel}>
           Cancel
         </button>
-        <button type="submit">AddExpense</button>
+        <button className="add-btn" type="submit">
+          Add Expense
+        </button>
       </div>
     </form>
   );

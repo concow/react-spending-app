@@ -68,7 +68,7 @@ export default function Login() {
         </h4>
       </section>
       <section className="form">
-        <form onSubmit={formSubmitHandler}>
+        <form className="login-form" onSubmit={formSubmitHandler}>
           <div className="form-group">
             <input
               type="email"

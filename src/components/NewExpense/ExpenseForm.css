@@ -10,7 +10,7 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  color: rgb(234, 218, 218);
+  color: white;
 }
 
 .new-expense__control input {
@@ -25,3 +25,45 @@
 .new-expense__actions {
   text-align: right;
 }
+
+.add-btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+  background-color: #1d2738;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+.cancel-btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+  background-color: #1d2738;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+.cancel-btn:hover,
+.cancel-btn:active {
+  background-color: #0379b4;
+  border-color: white;
+}
+
+.add-btn:hover,
+.add-btn:active {
+  background-color: #0379b4;
+  border-color: white;
+}
+
+/* .expense_form_ {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 34%,
+    rgba(0, 212, 255, 1) 100%
+  );
+} */

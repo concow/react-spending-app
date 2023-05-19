@@ -2,7 +2,7 @@ import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
 import { useState } from "react";
 
-export default function NewExpense(props) {
+export default function NewExpense() {
   const [isEditing, setIsEditing] = useState(false);
 
   // const saveExpenseDataHandler = (enteredExpenseData) => {
@@ -24,7 +24,9 @@ export default function NewExpense(props) {
     <div className="new-expense">
       {/* show button if we are NOT editing - FALSE */}
       {!isEditing && (
-        <button onClick={startEditingHandler}>Add New Expense</button>
+        <button className="new-expense-btn" onClick={startEditingHandler}>
+          Add New Expense
+        </button>
       )}
       {/* otherwise show form */}
       {isEditing && (
